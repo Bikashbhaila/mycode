@@ -27,6 +27,10 @@ def main():
     
     top10_rated["votes"].plot(kind="barh")
     plot.savefig("/home/student/static/bar_votes.png", bbox_inches='tight')
+    
+    # pie chart
+    
+    
 
 
 if __name__ == "__main__":
