@@ -1,17 +1,0 @@
---2021-08-04 22:52:50--  https://drive.google.com/uc?id=1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr
-Resolving drive.google.com (drive.google.com)... 142.250.81.238, 2607:f8b0:4006:817::200e
-Connecting to drive.google.com (drive.google.com)|142.250.81.238|:443... connected.
-HTTP request sent, awaiting response... 302 Moved Temporarily
-Location: https://doc-08-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/51rpsvuo4be6uq3o4im944olrovrh4mg/1628117550000/01343260484537636090/*/1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr [following]
-Warning: wildcards not supported in HTTP.
---2021-08-04 22:52:51--  https://doc-08-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/51rpsvuo4be6uq3o4im944olrovrh4mg/1628117550000/01343260484537636090/*/1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr
-Resolving doc-08-0s-docs.googleusercontent.com (doc-08-0s-docs.googleusercontent.com)... 142.250.65.225, 2607:f8b0:4006:80c::2001
-Connecting to doc-08-0s-docs.googleusercontent.com (doc-08-0s-docs.googleusercontent.com)|142.250.65.225|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 87547 (85K) [application/vnd.openxmlformats-officedocument.spreadsheetml.sheet]
-Saving to: ‘uc?id=1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr’
-
-uc?id=1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr   0%[                                                                             ]       0  --.-KB/s               uc?id=1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr 100%[============================================================================>]  85.50K  --.-KB/s    in 0.02s   
-
-2021-08-04 22:52:51 (4.59 MB/s) - ‘uc?id=1iErTl4DuiRwaVV-UAXYZqzaeSyw8fkKr’ saved [87547/87547]
-
