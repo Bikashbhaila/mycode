@@ -5,6 +5,8 @@ import requests
 BASE_API_URL = "https://opentdb.com/api.php?"
 user_choices = {}
 
+def welcomeUser():
+    print("Welcome to TRIVIA game.\n -- Pick number of questions and difficulty level. \n -- Get your score at the end")
 # get user choices and create URI based on the choice
 def getUserChoices():
     diff_levels = ["easy", "medium", "hard"]
@@ -12,7 +14,7 @@ def getUserChoices():
     num_questions = 0
     try:
         while num_questions < 3 :
-            num_questions = int(input("How many questions? >> "))
+            num_questions = int(input("How many TRIVIA questions do you want play? \n>> "))
             if num_questions >= 3:
                 while diff_level not in diff_levels:
                     diff_level = input(f"Please select diff level: {diff_levels}\n>> ").strip().lower()
@@ -28,9 +30,9 @@ def getUserChoices():
 def startQuiz():
     user_score = 0
     API_URL = BASE_API_URL + "amount=" + user_choices["num_questions"] + "&difficulty=" + user_choices["diff_level"]
-    print(API_URL)
     response = requests.get(API_URL)
     trivia_dict = response.json().get("results")
+
     for trivia in trivia_dict:
         user_answer = input(trivia["question"].strip() + "\n>> ").strip().lower()
         if user_answer == trivia["correct_answer"].lower():
@@ -40,12 +42,12 @@ def startQuiz():
             print("WRONG!!! The correct answer is: ", trivia["correct_answer"])
     print(f"Your FINAL SCORE is", user_score, "out of", user_choices["num_questions"])
 
+
 def main():
-    
+    welcomeUser()
     while True:
         getUserChoices()
         startQuiz()
-
         wantRestart = input("Do you want to play again? [Yes/No]\n>> ").lower()
         if wantRestart == "yes":
             print("Sure, good luck this time")
