@@ -16,16 +16,16 @@ def startGame():
             currency_code = countries[country_input]["currency_code"].strip().upper()
             # prompt user to enter amount and pass currency code and amount_input to getExchangeRate for API Call
             try:
-                amount_input = int(input("Enter your net worth in US Dollars:\n=>USD "))
+                amount_input = int(input("Enter your net worth in US Dollars:\n=> USD "))
                 getExchangeRate(country_input, amount_input, currency_code)
             except ValueError as response:
                 print(response)
                 print("Non-numerical value entered. Net worth must be a number")
-                amount_input = int(input("Enter your net worth in US Dollars:\n=>USD "))
+                amount_input = int(input("Enter your net worth in US Dollars:\n=> USD "))
                 getExchangeRate(country_input, amount_input, currency_code)
         else: 
             # prompt user to enter again if country_input not in countries dictionary
-            print(f"Invalid country: {country_input}. Please enter a valid country name.")
+            print(f"Invalid country: {country_input}. Please enter a valid country name.\n=> ")
 
 
 def getExchangeRate(country_input, amount_input, currency_code):
@@ -53,15 +53,15 @@ def displayNetWorth(exchange_rate, country_input, currency_code, amount_input):
 
 def main():
     print("Welcome to <<ARE YOU A MILLIONAIRE SOMEWHERE IN THE WORLD IN REALTIME?>>")
+    
     while True:
-        startGame()  
-
-        playAgain = input("Do you want to try another country?").lower()
+        startGame() 
+        playAgain = input("Do you want to try another country? Please type yes or no.\n=> ").lower()
         if playAgain == "yes":
             continue
         elif playAgain == "no" or playAgain != "yes":
             print("GoodBye!!!")
             break
-        
+
 if __name__ == "__main__":
     main()
