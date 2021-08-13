@@ -29,8 +29,11 @@ def startGame():
 
 
 def getExchangeRate(country_input, amount_input, currency_code):
-    api_key = "6cd5694c638bd04a1912f18d"
-    API_URL = (f"{BASE_API_URL}{api_key}/pair/USD/{currency_code}")
+    # read api-key from cred file
+    with open("currency.cred") as mycred:
+        cred = mycred.read().strip("\n")
+    
+    API_URL = (f"{BASE_API_URL}{cred}/pair/USD/{currency_code}")
 
     # send GET request and get exchange rate
     response = requests.get(API_URL)
